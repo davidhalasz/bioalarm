@@ -1,8 +1,9 @@
 <x-guest-layout>
     <div class="bg-blue-500">
         <div class="max-w-2xl mx-auto headerDiv bg-blue-500 text-white">
-            <h1 class="text-6xl font-bold text-center pt-20">BIOALARM</h1>
-            <p class="pt-4 text-lg font-bold text-center">Biológiai alapú vízminőség állapot felmérő és riasztó rendszer
+            <h1 class="text-6xl font-bold text-center pt-28 tracking-wide">BIOALARM</h1>
+            <p class="pt-12 text-2xl font-semibold text-center tracking-wide leading-relaxed">Biológiai alapú vízminőség
+                állapot felmérő és riasztó rendszer
                 megvalósítása, feltételeinek kidolgozása.</p>
         </div>
     </div>
@@ -29,12 +30,12 @@
             </path>
         </svg>
     </div>
-    <div class="container mx-auto pb-6">
-        <h1 class="text-3xl pb-4 text-center">
-            BIOALARM Kft
+    <div id="rolunk" class="container mx-auto pt-20 pb-32">
+        <h1 class="text-3xl pb-4 font-semibold text-center tracking-wide leading-relaxed">
+            BIOALARM Kft.
         </h1>
-        <div class="grid grid-cols-2">
-            <p class="my-auto text-lg">
+        <div class="grid md:grid-cols-2 sm:grid-cols-1">
+            <p class="my-auto text-xl text-justify tracking-wide leading-relaxed">
                 A BIOALARM Kft. 2013 májusában, az Észak-Magyarországi Régióban, Bánki székhellyel alakult innovatív
                 start-up vállalkozás. A cég létrejöttének célja a Bánki-tó élővilágának vizsgálatán alapuló innovatív
                 ötlet
@@ -47,20 +48,23 @@
         </div>
     </div>
 
-    <div class="bg-blue-200 pb-6">
+    <div id="projekt" class="bg-blue-200 py-32 relative">
+        <div class="bg-[url('../../public/images/circles.svg')] absolute top-0 left-0 z-1 w-full h-12">
+
+        </div>
         <div class="container mx-auto">
-            <h1 class="text-3xl text-white text-center font-bold pt-10 pb-10">
-                A projekt
-            </h1>
-            <div class="grid grid-cols-2 gap-10">
-                <div class="bg-slate-900 text-white p-8 rounded-3xl relative mb-6">
-                    <div class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 -right-4 text-center ">
+            <h2 class="font-semibold text-black text-[35px] leading-tight text-center mb-12">
+                A Projekt
+            </h2>
+            <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">
+                <div class="bg-slate-900 text-white p-12 rounded-3xl relative mb-6">
+                    <div class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:right-0 md:-right-4 text-center ">
                         <span>
                             1.
                         </span>
                     </div>
 
-                    <p class="text-lg">
+                    <p class="text-lg tracking-wide leading-relaxed text-justify">
                         A projektben egy olyan ötlet kerül megvalósíthatósági tanulmánya kerül kidolgozásra, mely első,
                         kutatási
                         fázisában feltérképezésre kerülnek a vízminőség vizsgálat során Európában alkalmazott,
@@ -87,13 +91,13 @@
                 <div>
                     <div class="bg-slate-900 text-white p-8 rounded-3xl relative mb-6">
                         <div
-                            class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 -left-4 text-center">
+                            class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:left-0 md:-left-4 text-center">
                             <span>
                                 2.
                             </span>
                         </div>
 
-                        <p class="text-lg">
+                        <p class="text-lg tracking-wide leading-relaxed text-justify">
                             A megvalósíthatósági tanulmány második fázisában az előállítandó rendszer szoftverének
                             rendszerterv
                             készül el. Ez egy döntéstámogató szakértői rendszer lesz, amely alkalmas a biológiai
@@ -114,7 +118,7 @@
                     </div>
 
                     <div class="mx-auto w-fit bg-slate-900 text-white p-8 rounded-3xl mb-6">
-                        <table class="table-auto">
+                        <table class="table-auto text-lg tracking-wide leading-relaxed text-justify">
                             <tbody>
                                 <tr>
                                     <td class="pr-4">Projektazonosító:</td>
@@ -138,90 +142,297 @@
                 </div>
             </div>
         </div>
+        <div class="bg-[url('../../public/images/circles.svg')] absolute bottom-0 left-0 z-1 w-full h-12">
+
+        </div>
     </div>
 
 
-    <div class="container mx-auto py-12">
-        <h1 class="text-3xl pb-6 text-center">
+    <div id="partnerek" class="container mx-auto py-32">
+        <h1 class="text-3xl pb-12 text-center">
             Partnerek
         </h1>
-        <div class="grid grid-cols-3">
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
             <img class="m-auto" src="{{ asset('images/logo_regi_font2.png') }}" alt="Norria">
             <img class="m-auto max-h-16" src="{{ asset('images/dbh_Innohub_logo-1234x556.png') }}" alt="Norria">
             <p class="m-auto text-2xl">Zaniotech Kft.</p>
         </div>
     </div>
 
-    <div class="container mx-auto py-12">
-        <h1 class="text-3xl pb-6 text-center">
+
+    <div id="hirek-esemenyek" class="container mx-auto py-32">
+        <h1 class="text-3xl pb-12 text-center">
             Hírek, események
         </h1>
 
-        <div class="grid grid-cols-3 gap-4">
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
-            <div class="border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <h2 class="text-lg pb-3">Lorem ipsum dolor et cetera</h2>
-                <p class="line-clamp-3">Nulla facilisi. Maecenas faucibus varius gravida. Morbi sodales, justo vel
-                    tempor
-                    vestibulum, nisl metus eleifend nunc, vitae dignissim sapien turpis id ex. Proin in pharetra quam,
-                    vitae sodales tortor. Morbi libero dolor, egestas faucibus fermentum quis, feugiat at metus. Nunc ac
-                    justo sapien.</p>
-            </div>
+        <div class="flex flex-wrap gap-4 justify-center">
+            @foreach ($hirek as $hir)
+                <div>
+
+                    <div x-data="{ id: 'modal-example{{ $hir->id }}' }" x-on:click="bsd(true), $dispatch('modal-overlay',{id})"
+                        class="rounded-xl cursor-pointer w-96 border border-blue-500 hover:bg-blue-500 hover:text-white p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <h2 class="text-lg pb-3">{{ $hir->title }}</h2>
+                        <p class="line-clamp-3">{{ $hir->body }}</p>
+                    </div>
+
+                    <div class="fixed inset-0 z-50 flex flex-col items-center justify-end px-5 overflow-y-auto bg-gray-800 bg-opacity-50 sm:justify-start sm:px-0"
+                        x-data="{ modal: false }" x-show="modal"
+                        x-on:modal-overlay.window="if ($event.detail.id == 'modal-example{{ $hir->id }}') modal=true"
+                        x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500"
+                        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak>
+                        <div class="w-full mb-5 transition-all transform sm:mt-20 sm:mb-0 sm:max-w-2xl" x-show="modal"
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-start="opacity-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4"
+                            x-on:click.away="modal=false, bsd(false)">
+                            <div class="p-10 bg-white rounded-xl shadow-sm relative">
+                                <button class="rounded-full bg-red-500 absolute z-60 -top-2 -right-2 text-white" @click="modal=false">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                          </svg>                          
+                                    </span>
+                                </button>
+                                <h3 class="text-lg font-bold mb-3">
+                                    {{ $hir->title }}
+                                </h3>
+                                {{ $hir->body }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            @endforeach
         </div>
     </div>
-    <div class="container mx-auto py-12">
-        <h1 class="text-3xl pb-6 text-center">
+
+    <script>
+        function bsd(status) {
+            var body = document.querySelector("body");
+
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            window.onscroll = function() {};
+
+            if (status === true) {
+                // Check window scroll exists else use traditional method
+                if (window.onscroll !== null) {
+                    // if any scroll is attempted, set this to the previous value
+                    window.onscroll = function() {
+                        window.scrollTo(scrollLeft, scrollTop);
+                    };
+                }
+            } else {
+                //body.classList.remove("fixed", "overflow-y-scroll");
+                window.onscroll = function() {};
+            }
+        }
+    </script>
+
+
+    <div id="galeria" class="container mx-auto py-32">
+        <h1 class="text-3xl pb-12 text-center">
             Galéria
         </h1>
-        <div class="grid grid-cols-6 gap-4">
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
-            <div class="h-52 w-52 border border-blue-500"></div>
+
+        <div class="flex flex-wrap gap-4 justify-center">
+            @foreach ($kepek as $kep)
+                <div class="h-52 w-52 cursor-pointer" onclick="showModal('{{ url('/storage/galeria/' . $kep->filepath) }}')">
+                    <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
+                </div>
+            @endforeach
+
+            <div id="modalIMAGE"
+                class="hidden fixed top-0 left-0 z-180 w-screen h-screen bg-black/70 flex justify-center items-center">
+
+                <!-- The close button -->
+                <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+                    onclick="closeModal()">&times;</a>
+
+                <!-- A big image will be displayed here -->
+                <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover" />
+            </div>
         </div>
     </div>
+
+    <script>
+        // Get the modal by id
+        var modal = document.getElementById("modalIMAGE");
+
+        // Get the modal image tag
+        var modalImg = document.getElementById("modal-img");
+
+        // this function is called when a small image is clicked
+        function showModal(src) {
+            modal.classList.remove('hidden');
+            modalImg.src = src;
+        }
+
+        // this function is called when the close button is clicked
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+    </script>
+
+    <div id="kapcsolat" class="container-fluid">
+        <section class="relative py-20 lg:py-[120px] z-[-1]">
+            <div class="absolute w-full h-1/2 -z-100 top-0 left-0 bg-blue-200"></div>
+            <div class="container mx-auto relative">
+                <div class="flex flex-wrap items-center -mx-4">
+                    <div class="w-full lg:w-6/12 xl:w-7/12 px-4">
+                        <div class="mb-[60px] lg:mb-[100px] xl:mb-[150px]">
+                            <span class="text-base font-semibold text-black mb-6">
+                                Kapcsolatfelvétel
+                            </span>
+                            <h2 class="font-semibold text-black text-[35px] leading-tight">
+                                Let’s talk about <br />
+                                your problem.
+                            </h2>
+                        </div>
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="max-w-[330px] w-full px-4">
+                                <div class="w-full mb-12">
+                                    <div class="flex pt-4">
+                                        <div class="w-9 h-9 mr-6 text-primary">
+                                            <svg width="35" height="35" viewBox="0 0 35 35"
+                                                class="fill-current">
+                                                <path
+                                                    d="M17.5 0.710938C9.89844 0.710938 3.66406 6.72656 3.66406 14.0547C3.66406 19.9062 12.0313 29.5859 15.6406 33.5234C16.1328 34.0703 16.7891 34.3437 17.5 34.3437C18.2109 34.3437 18.8672 34.0703 19.3594 33.5234C22.9688 29.6406 31.3359 19.9062 31.3359 14.0547C31.3359 6.67188 25.1016 0.710938 17.5 0.710938ZM17.9375 32.2109C17.6641 32.4844 17.2812 32.4844 17.0625 32.2109C14.3828 29.3125 5.57812 19.3594 5.57812 14.0547C5.57812 7.71094 10.9375 2.625 17.5 2.625C24.0625 2.625 29.4219 7.76562 29.4219 14.0547C29.4219 19.3594 20.6172 29.2578 17.9375 32.2109Z" />
+                                                <path
+                                                    d="M17.5 8.58594C14.2734 8.58594 11.5938 11.2109 11.5938 14.4922C11.5938 17.7188 14.2187 20.3984 17.5 20.3984C20.7812 20.3984 23.4062 17.7734 23.4062 14.4922C23.4062 11.2109 20.7266 8.58594 17.5 8.58594ZM17.5 18.4297C15.3125 18.4297 13.5078 16.625 13.5078 14.4375C13.5078 12.25 15.3125 10.4453 17.5 10.4453C19.6875 10.4453 21.4922 12.25 21.4922 14.4375C21.4922 16.625 19.6875 18.4297 17.5 18.4297Z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-lg font-medium text-dark mb-4">
+                                                Elérhetőségünk
+                                            </h5>
+                                            <p class="text-base text-body-color">
+                                                Alexy Norbert
+                                            </p>
+                                            <p class="text-base text-body-color">
+                                                Székhely: 1115 Budapest, Bartók Béla út 96.
+                                            </p>
+                                            <p class="text-base text-body-color">
+                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt megvalósítási
+                                                helyszíne is volt:
+                                                2653 Bánk, Rózsafa u. 30.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="max-w-[330px] w-full px-4">
+                                <div class="w-full mb-12">
+                                    <div class="flex pt-4">
+                                        <div class="w-9 h-9 mr-6 text-primary">
+                                            <svg width="35" height="25" viewBox="0 0 35 25"
+                                                class="fill-current">
+                                                <path
+                                                    d="M31.1719 0.960938H3.82812C2.07813 0.960938 0.65625 2.38281 0.65625 4.13281V20.9219C0.65625 22.6719 2.07813 24.0938 3.82812 24.0938H31.1719C32.9219 24.0938 34.3438 22.6719 34.3438 20.9219V4.13281C34.3438 2.38281 32.9219 0.960938 31.1719 0.960938ZM31.1719 2.875C31.4453 2.875 31.6641 2.92969 31.8828 3.09375L18.2656 11.3516C17.7734 11.625 17.2266 11.625 16.7344 11.3516L3.11719 3.09375C3.33594 2.98438 3.55469 2.875 3.82812 2.875H31.1719ZM31.1719 22.125H3.82812C3.17188 22.125 2.57031 21.5781 2.57031 20.8672V5.00781L15.6953 12.9922C16.2422 13.3203 16.8438 13.4844 17.4453 13.4844C18.0469 13.4844 18.6484 13.3203 19.1953 12.9922L32.3203 5.00781V20.8672C32.4297 21.5781 31.8281 22.125 31.1719 22.125Z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-lg font-medium text-dark mb-4">
+                                                Miben segíthetünk?
+                                            </h5>
+                                            <p class="text-base text-body-color mb-2">
+                                                Telefon: +36 20 468 0092
+                                            </p>
+                                            <p class="text-base text-body-color">
+                                                E-mail: bioalarm.kft@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-6/12 xl:w-5/12 px-4">
+                        <div
+                            class="
+                    bg-white
+                    rounded-lg
+                    shadow-lg
+                    py-12
+                    px-8
+                    sm:p-[60px]
+                    lg:px-12
+                    xl:p-60px
+                    ">
+                            <h3 class="font-semibold text-black text-2xl sm:text-[28px] mb-8">
+                                Küldj üzenetet
+                            </h3>
+                            <form>
+                                <div class="mb-6">
+                                    <label class="text-xs text-body-color block">
+                                        Név*
+                                    </label>
+                                    <input type="text" placeholder="név"
+                                        class="
+                             border-b border-[#f1f1f1]
+                             w-full
+                             text-base text-body-color
+                             py-4
+                             focus-visible:shadow-none
+                             focus:border-primary
+                             outline-none
+                             " />
+                                </div>
+                                <div class="mb-6">
+                                    <label class="text-xs text-body-color block">Email*</label>
+                                    <input type="email" placeholder="example@yourmail.com"
+                                        class="
+                             border-b border-[#f1f1f1]
+                             w-full
+                             text-base text-body-color
+                             py-4
+                             focus-visible:shadow-none
+                             focus:border-primary
+                             outline-none
+                             " />
+                                </div>
+                                <div class="mb-6">
+                                    <label class="text-xs text-body-color block">Üzenet*</label>
+                                    <textarea rows="3" placeholder="üzenet szövege"
+                                        class="
+                             border-b border-[#f1f1f1]
+                             w-full
+                             text-base text-body-color
+                             py-4
+                             resize-none
+                             focus-visible:shadow-none
+                             focus:border-primary
+                             outline-none
+                             "></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit"
+                                        class="
+                             text-white
+                             bg-blue-700
+                             text-base
+                             font-medium
+                             rounded
+                             px-10
+                             py-3
+                             transition
+                             hover:bg-opacity-90
+                             ">
+                                        Küldés
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
 </x-guest-layout>

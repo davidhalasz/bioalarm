@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controller::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -25,4 +24,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/hirek', function () {
+        return view('vendor/jetstream/hirek-feltoltese');
+    })->name('hirek-feltoltese');
+    Route::get('/kepek', function () {
+        return view('vendor/jetstream/kepek-feltoltese');
+    })->name('kepek-feltoltese');
 });

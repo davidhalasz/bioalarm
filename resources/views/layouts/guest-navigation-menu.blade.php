@@ -11,20 +11,23 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div class="text-lg lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+        <a onclick="scrollTo('rolunk')" href="#rolunk" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
           Rólunk
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+        <a onclick="scrollTo('projekt')" href="#projekt" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+          Projekt
+        </a>
+        <a onclick="scrollTo('partnerek')" href="#partnerek" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
           Partnerek
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+        <a onclick="scrollTo('hirek-esemenyek')" href="#hirek-esemenyek" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
           Hírek, események
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
-          Kapcsolat
+        <a onclick="scrollTo('galeria')" href="#galeria" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+          Galéria
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white">
-          Hírlevél
+        <a onclick="scrollTo('kapcsolat')" href="#kapcsolat" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
+          Kapcsolat
         </a>
       </div>
     </div>

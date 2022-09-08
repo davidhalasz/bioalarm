@@ -12,15 +12,20 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script>
+            function scrollTo(id) {
+                document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+            }
+        </script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen">
+        <div class="min-h-screen homePage">
             @include('layouts.guest-navigation-menu')
             <main>
                 {{ $slot }}
             </main>
         </div>
-        @include('layouts.footer')
+        @include('layouts.footer-section')
         @livewireScripts
     </body>
 </html>
