@@ -18,7 +18,8 @@ module.exports = {
                 'baseBlue': '#0099ff',
             },
             backgroundImage: {
-                'wave-bg': "url('../public/images/footer-bg.svg')"
+                'wave-bg': "url('../public/images/footer-bg.svg')",
+                'tanacsadas-bg': "url('./public/images/version2/tanacsadas.jpg')"
             }
         },
     },

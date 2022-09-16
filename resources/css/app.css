@@ -6,3 +6,63 @@
 html, body {
     scroll-behavior: smooth;
 }
+
+.rounded-corner {
+    border-top-left-radius: 60px;
+    max-height: 580px;
+}
+
+.snap {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .snap::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .snap > img {
+    scroll-snap-align: center;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  .navbarTogglerActive > span:nth-child(1) {
+    @apply top-[7px];
+    transform: rotate(45deg);
+  }
+  .navbarTogglerActive > span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .navbarTogglerActive > span:nth-child(3) {
+    @apply top-[-8px] rotate-[135deg];
+  }
+  
+  
+  .shape-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+  }
+
+  #tanacsadasCard {
+    background-image: url('../../public/images/version2/tanacsadas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #menedzsmentCard {
+    background-image: url('../../public/images/version2/management.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #palyazatCard {
+    background-image: url('../../public/images/version2/palyazat.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

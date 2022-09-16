@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="bg-blue-500">
+    <div class="bg-blue-500 mb-0 pb-0">
         <div class="max-w-2xl mx-auto headerDiv bg-blue-500 text-white">
             <h1 class="text-6xl font-bold text-center pt-28 tracking-wide">BIOALARM</h1>
             <p class="pt-12 text-2xl font-semibold text-center tracking-wide leading-relaxed">Biológiai alapú vízminőség
@@ -7,8 +7,8 @@
                 megvalósítása, feltételeinek kidolgozása.</p>
         </div>
     </div>
-    <div>
-        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 330" version="1.1"
+    <div class="mt-0 pt-0">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 328" version="1.1"
             xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
@@ -44,7 +44,7 @@
                 kockázati tőke bevonásával olyan terméket szeretne előállítani, amely nem csak Magyarországon, hanem
                 Európa-szerte értékesíthető és használható a természetes vizek minőségének vizsgálatára.
             </p>
-            <img class="mx-auto" style="height: 400px" src="{{ asset('images/kep1.png') }}" alt="">
+            <img class="mx-auto" style="height: 400px" src="{{ asset('images/about-kep.png') }}" alt="">
         </div>
     </div>
 
@@ -58,7 +58,8 @@
             </h2>
             <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">
                 <div class="bg-slate-900 text-white p-12 rounded-3xl relative mb-6">
-                    <div class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:right-0 md:-right-4 text-center ">
+                    <div
+                        class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:right-0 md:-right-4 text-center ">
                         <span>
                             1.
                         </span>
@@ -190,11 +191,14 @@
                             x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4"
                             x-on:click.away="modal=false, bsd(false)">
                             <div class="p-10 bg-white rounded-xl shadow-sm relative">
-                                <button class="rounded-full bg-red-500 absolute z-60 -top-2 -right-2 text-white" @click="modal=false">
+                                <button class="rounded-full bg-red-500 absolute z-60 -top-2 -right-2 text-white"
+                                    @click="modal=false">
                                     <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                          
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
                                     </span>
                                 </button>
                                 <h3 class="text-lg font-bold mb-3">
@@ -234,50 +238,48 @@
         }
     </script>
 
-
-    <div id="galeria" class="container mx-auto py-32">
+    <div x-data="{ open: false, imageUrl: '' }" id="galeria" class="container mx-auto py-32">
         <h1 class="text-3xl pb-12 text-center">
             Galéria
         </h1>
 
         <div class="flex flex-wrap gap-4 justify-center">
             @foreach ($kepek as $kep)
-                <div class="h-52 w-52 cursor-pointer" onclick="showModal('{{ url('/storage/galeria/' . $kep->filepath) }}')">
+                <div x-on:click="open = true" class="h-52 w-52 cursor-pointer"
+                    @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
                     <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
                 </div>
             @endforeach
 
-            <div id="modalIMAGE"
-                class="hidden fixed top-0 left-0 z-180 w-screen h-screen bg-black/70 flex justify-center items-center">
+            <div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog"
+                aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')"
+                class="fixed inset-0 z-10 overflow-y-auto">
 
-                <!-- The close button -->
-                <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
-                    onclick="closeModal()">&times;</a>
+                <div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
 
-                <!-- A big image will be displayed here -->
-                <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover" />
+
+                <div x-show="open" x-transition x-on:click="open = false"
+                    class="relative flex min-h-screen items-center justify-center p-4">
+
+                    <div x-on:click.stop x-trap.noscroll.inert="open"
+                        class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg">
+                        <button class="absolute bg-red-500 hover:bg-red-700 text-white rounded-full -top-2 -right-2">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <img class="w-full h-full object-cover" :src="imageUrl" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // Get the modal by id
-        var modal = document.getElementById("modalIMAGE");
 
-        // Get the modal image tag
-        var modalImg = document.getElementById("modal-img");
-
-        // this function is called when a small image is clicked
-        function showModal(src) {
-            modal.classList.remove('hidden');
-            modalImg.src = src;
-        }
-
-        // this function is called when the close button is clicked
-        function closeModal() {
-            modal.classList.add('hidden');
-        }
-    </script>
 
     <div id="kapcsolat" class="container-fluid">
         <section class="relative py-20 lg:py-[120px] z-[-1]">
@@ -318,7 +320,8 @@
                                                 Székhely: 1115 Budapest, Bartók Béla út 96.
                                             </p>
                                             <p class="text-base text-body-color">
-                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt megvalósítási
+                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt
+                                                megvalósítási
                                                 helyszíne is volt:
                                                 2653 Bánk, Rózsafa u. 30.
                                             </p>
@@ -352,7 +355,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-6/12 xl:w-5/12 px-4">
+                    <div class="w-full lg:w-6/12 xl:w-5/12 px-4 z-">
                         <div
                             class="
                     bg-white
@@ -378,9 +381,8 @@
                              w-full
                              text-base text-body-color
                              py-4
-                             focus-visible:shadow-none
-                             focus:border-primary
-                             outline-none
+                             focus:ring-1 focus:ring-sky-500
+                             
                              " />
                                 </div>
                                 <div class="mb-6">

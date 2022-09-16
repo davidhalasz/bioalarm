@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [Controller::class, 'index']);
+Route::get('/fooldal', [Controller::class, 'fooldal']);
 
 Route::middleware([
     'auth:sanctum',
