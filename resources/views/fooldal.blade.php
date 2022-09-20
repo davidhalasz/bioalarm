@@ -29,7 +29,7 @@
                         </p>
                         </ul>
                         <div class="clients pt-0">
-                            <h6 class="mb-2 flex items-center text-base font-normal text-body-color">
+                            <h6 class="mb-2 flex items-center text-3xl font-semibold text-body-color">
                                 Partnerek
                                 <span class="ml-2 inline-block h-[1px] w-8 bg-body-color"></span>
                             </h6>
@@ -98,8 +98,7 @@
                         Szolgáltatásaink
                     </h2>
                     <p class="text-base text-body-color">
-                        There are many variations of passages of Lorem Ipsum available
-                        but the majority have suffered alteration in some form.
+                        Szolgáltatásaink köre a tapasztalatunkkal együtt bővült az elmúlt évek során.
                     </p>
                 </div>
             </div>
@@ -107,21 +106,21 @@
         <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="mb-8 h-[300px] rounded-[20px] p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 grid grid-cols-3 content-center" id="tanacsadasCard">
-                    <h4 class="col-span-3 p-4 bg-white/70 text-xl font-semibold text-dark text-center font-bold">
+                    <h4 class="col-span-3 p-4 bg-white/70 text-xl text-dark text-center font-bold">
                         Pályázati tanácsadás
                     </h4>
                 </div>
             </div>
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="mb-8 h-[300px] rounded-[20px] p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 grid grid-cols-3 content-center" id="menedzsmentCard">
-                    <h4 class="col-span-3 p-4 bg-white/70 text-xl font-semibold text-dark text-center font-bold">
+                    <h4 class="col-span-3 p-4 bg-white/70 text-xl text-dark text-center font-bold">
                         Projektmenedzsment
                     </h4>
                 </div>
             </div>
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="mb-8 h-[300px] rounded-[20px] p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 grid grid-cols-3 content-center" id="palyazatCard">
-                    <h4 class="col-span-3 p-4 bg-white/70 text-xl font-semibold text-dark text-center font-bold">
+                    <h4 class="col-span-3 p-4 bg-white/70 text-xl text-dark text-center font-bold">
                         Pályázatírás
                     </h4>
                 </div>
@@ -329,7 +328,7 @@
                 <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
                     <div class="mt-10 lg:mt-0">
                         <p class="mb-8 text-lg text-justify">
-                            A projektben egy olyan ötlet kerül megvalósíthatósági tanulmánya kerül kidolgozásra, mely
+                            A projektben egy olyan ötlet megvalósíthatósági tanulmánya kerül kidolgozásra, mely
                             első,
                             kutatási
                             fázisában feltérképezésre kerülnek a vízminőség vizsgálat során Európában alkalmazott,
@@ -405,61 +404,249 @@
     </section>
 
 
-    <div id="hirek-esemenyek" class="container mx-auto py-32">
-        <h2 class="mb-16 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] text-center">
-            Hírek, események
-        </h2>
+    <div id="hirek-esemenyek" class="container mx-auto py-12">
 
-        <div class="-mx-4 flex flex-wrap">
-            @foreach ($hirek as $hir)
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10">
-                        <h4 class="mb-3 text-xl font-semibold text-dark">
-                            {{ $hir->title }}
-                        </h4>
-                        <p class="line-clamp-3">{{ $hir->body }}
-                        </p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====== Blog Section Start -->
+<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
+   <div class="container">
+      <div class="flex flex-wrap justify-center -mx-4">
+         <div class="w-full px-4">
+            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+               <h2
+                  class="
+                  font-bold
+                  text-3xl
+                  sm:text-4xl
+                  md:text-[40px]
+                  text-dark
+                  mb-4
+                  "
+                  >
+                  Hírek, események
+               </h2>
+               <p class="text-base text-body-color">
+                  There are many variations of passages of Lorem Ipsum available
+                  but the majority have suffered alteration in some form.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="max-w-[370px] mx-auto mb-10">
+               <div class="rounded overflow-hidden mb-8">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-01.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+               </div>
+               <div>
+                  <span
+                     class="
+                     bg-blue-500
+                     rounded
+                     inline-block
+                     text-center
+                     py-1
+                     px-4
+                     text-xs
+                     leading-loose
+                     font-semibold
+                     text-white
+                     mb-5
+                     "
+                     >
+                  Dec 22, 2023
+                  </span>
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-xl
+                        sm:text-2xl
+                        lg:text-xl
+                        xl:text-2xl
+                        mb-4
+                        inline-block
+                        text-dark
+                        hover:text-primary
+                        "
+                        >
+                     Meet AutoManage, the best AI management tools
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color">
+                     Lorem Ipsum is simply dummy text of the printing and
+                     typesetting industry.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="max-w-[370px] mx-auto mb-10">
+               <div class="rounded overflow-hidden mb-8">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-02.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+               </div>
+               <div>
+                  <span
+                     class="
+                     bg-blue-500
+                     rounded
+                     inline-block
+                     text-center
+                     py-1
+                     px-4
+                     text-xs
+                     leading-loose
+                     font-semibold
+                     text-white
+                     mb-5
+                     "
+                     >
+                  Mar 15, 2023
+                  </span>
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-xl
+                        sm:text-2xl
+                        lg:text-xl
+                        xl:text-2xl
+                        mb-4
+                        inline-block
+                        text-dark
+                        hover:text-primary
+                        "
+                        >
+                     How to earn more money as a wellness coach
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color">
+                     Lorem Ipsum is simply dummy text of the printing and
+                     typesetting industry.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="max-w-[370px] mx-auto mb-10">
+               <div class="rounded overflow-hidden mb-8">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-03.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+               </div>
+               <div>
+                  <span
+                     class="
+                     bg-blue-500
+                     rounded
+                     inline-block
+                     text-center
+                     py-1
+                     px-4
+                     text-xs
+                     leading-loose
+                     font-semibold
+                     text-white
+                     mb-5
+                     "
+                     >
+                  Jan 05, 2023
+                  </span>
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-xl
+                        sm:text-2xl
+                        lg:text-xl
+                        xl:text-2xl
+                        mb-4
+                        inline-block
+                        text-dark
+                        hover:text-primary
+                        "
+                        >
+                     The no-fuss guide to upselling and cross selling
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color">
+                     Lorem Ipsum is simply dummy text of the printing and
+                     typesetting industry.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- ====== Blog Section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
-    <div x-data="{ open: false, imageUrl: '' }" id="galeria" class="container mx-auto pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
-        <h2 class="mb-16 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] text-center">
+    <div x-data="{ open: false, imageUrl: '' }" id="galeria" class="container mx-auto py-32">
+        <h1 class="text-3xl pb-12 text-center">
             Galéria
-        </h2>
-
+        </h1>
+    
         <div class="flex flex-wrap gap-4 justify-center">
             @foreach ($kepek as $kep)
-                <div x-on:click="open = true" class="h-52 w-52 cursor-pointer"
-                    @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
+                <div x-on:click="open = true" class="h-64 w-64 cursor-pointer"
+                @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
                     <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
                 </div>
             @endforeach
-
-            <div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog"
-                aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')"
+    
+            <div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" 
                 class="fixed inset-0 z-10 overflow-y-auto">
-
-                <div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
-
-
+    
+      
+    
                 <div x-show="open" x-transition x-on:click="open = false"
                     class="relative flex min-h-screen items-center justify-center p-4">
-
                     <div x-on:click.stop x-trap.noscroll.inert="open"
-                        class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg">
-                        <button class="absolute bg-red-500 hover:bg-red-700 text-white rounded-full -top-2 -right-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <img class="w-full h-full object-cover" :src="imageUrl" />
+                        class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-2 shadow-lg">
+                        <img x-on:click="open = false" class="w-full h-full object-cover" :src="imageUrl" />
                     </div>
                 </div>
             </div>
@@ -467,9 +654,9 @@
     </div>
 
     <div id="kapcsolat" class="container-fluid">
-        <section class="relative py-20 lg:py-[120px] z-[-1]">
+        <section class="relative py-20 lg:py-[120px] ">
             <div class="absolute w-full h-1/2 -z-100 top-0 left-0 bg-blue-200"></div>
-            <div class="container mx-auto relative">
+            <div class="container mx-auto relative px-8 lg:px-0">
                 <div class="flex flex-wrap items-center -mx-4">
                     <div class="w-full lg:w-6/12 xl:w-7/12 px-4">
                         <div class="mb-[60px] lg:mb-[100px] xl:mb-[150px]">
@@ -481,7 +668,7 @@
                                 your problem.
                             </h2>
                         </div>
-                        <div class="flex flex-wrap -mx-4">
+                        <div class="flex flex-wrap -mx-4 lg:pt-20">
                             <div class="max-w-[330px] w-full px-4">
                                 <div class="w-full mb-12">
                                     <div class="flex pt-4">
@@ -505,8 +692,7 @@
                                                 Székhely: 1115 Budapest, Bartók Béla út 96.
                                             </p>
                                             <p class="text-base text-body-color">
-                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt
-                                                megvalósítási
+                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt megvalósítási
                                                 helyszíne is volt:
                                                 2653 Bánk, Rózsafa u. 30.
                                             </p>
@@ -540,82 +726,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-6/12 xl:w-5/12 px-4 z-">
-                        <div
-                            class="
-                    bg-white
-                    rounded-lg
-                    shadow-lg
-                    py-12
-                    px-8
-                    sm:p-[60px]
-                    lg:px-12
-                    xl:p-60px
-                    ">
-                            <h3 class="font-semibold text-black text-2xl sm:text-[28px] mb-8">
-                                Küldj üzenetet
-                            </h3>
-                            <form>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">
-                                        Név*
-                                    </label>
-                                    <input type="text" placeholder="név"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             focus:ring-1 focus:ring-sky-500
-                             
-                             " />
-                                </div>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">Email*</label>
-                                    <input type="email" placeholder="example@yourmail.com"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             focus-visible:shadow-none
-                             focus:border-primary
-                             outline-none
-                             " />
-                                </div>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">Üzenet*</label>
-                                    <textarea rows="3" placeholder="üzenet szövege"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             resize-none
-                             focus-visible:shadow-none
-                             focus:border-primary
-                             outline-none
-                             "></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit"
-                                        class="
-                             text-white
-                             bg-blue-700
-                             text-base
-                             font-medium
-                             rounded
-                             px-10
-                             py-3
-                             transition
-                             hover:bg-opacity-90
-                             ">
-                                        Küldés
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+@livewire('contact')
                 </div>
             </div>
         </section>

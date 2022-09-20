@@ -21,7 +21,7 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen homePage">
             @include('layouts.vendeg-navbar')
-            <main>
+            <main class="tracking-wide leading-relaxed">
                 {{ $slot }}
             </main>
         </div>

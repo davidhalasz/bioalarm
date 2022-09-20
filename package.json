@@ -17,6 +17,8 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "@tailwindcss/line-clamp": "^0.4.2"
+        "@alpinejs/focus": "^3.10.3",
+        "@tailwindcss/line-clamp": "^0.4.2",
+        "tailgrids": "^1.1.7"
     }
 }
