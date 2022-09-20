@@ -1,13 +1,14 @@
 <x-guest-layout>
-    <div class="bg-blue-500 mb-0 pb-0">
-        <div class="max-w-2xl mx-auto headerDiv bg-blue-500 text-white">
+    <div>
+    <div class="bg-blue-500">
+        <div class="max-w-2xl mx-auto  bg-blue-500 text-white">
             <h1 class="text-6xl font-bold text-center pt-28 tracking-wide">BIOALARM</h1>
             <p class="pt-12 text-2xl font-semibold text-center tracking-wide leading-relaxed">Biológiai alapú vízminőség
                 állapot felmérő és riasztó rendszer
                 megvalósítása, feltételeinek kidolgozása.</p>
         </div>
     </div>
-    <div class="mt-0 pt-0">
+    <div class="-mt-1">
         <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 328" version="1.1"
             xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -30,11 +31,11 @@
             </path>
         </svg>
     </div>
-    <div id="rolunk" class="container mx-auto pt-20 pb-32">
+    <div id="rolunk" class="container mx-auto pt-20 pb-32 px-8 lg:px-10 xl:px-0">
         <h1 class="text-3xl pb-4 font-semibold text-center tracking-wide leading-relaxed">
             BIOALARM Kft.
         </h1>
-        <div class="grid md:grid-cols-2 sm:grid-cols-1">
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1">
             <p class="my-auto text-xl text-justify tracking-wide leading-relaxed">
                 A BIOALARM Kft. 2013 májusában, az Észak-Magyarországi Régióban, Bánki székhellyel alakult innovatív
                 start-up vállalkozás. A cég létrejöttének célja a Bánki-tó élővilágának vizsgálatán alapuló innovatív
@@ -44,11 +45,12 @@
                 kockázati tőke bevonásával olyan terméket szeretne előállítani, amely nem csak Magyarországon, hanem
                 Európa-szerte értékesíthető és használható a természetes vizek minőségének vizsgálatára.
             </p>
-            <img class="mx-auto" style="height: 400px" src="{{ asset('images/about-kep.png') }}" alt="">
+
+            <img class="mx-auto p-16 lg:p-24" src="{{ asset('images/about-kep.png') }}" alt="">
         </div>
     </div>
 
-    <div id="projekt" class="bg-blue-200 py-32 relative">
+    <div id="projekt" class="bg-blue-200 py-32 relative px-8 lg:px-0">
         <div class="bg-[url('../../public/images/circles.svg')] absolute top-0 left-0 z-1 w-full h-12">
 
         </div>
@@ -58,8 +60,7 @@
             </h2>
             <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">
                 <div class="bg-slate-900 text-white p-12 rounded-3xl relative mb-6">
-                    <div
-                        class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:right-0 md:-right-4 text-center ">
+                    <div class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 text-center right-1/2 lg:-right-4 translate-x-1/2 lg:-translate-x-0">
                         <span>
                             1.
                         </span>
@@ -90,9 +91,9 @@
                     </p>
                 </div>
                 <div>
-                    <div class="bg-slate-900 text-white p-8 rounded-3xl relative mb-6">
+                    <div class="bg-slate-900 text-white p-12 rounded-3xl relative mb-6">
                         <div
-                            class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 sm:left-0 md:-left-4 text-center">
+                            class="bg-blue-500 w-14 h-14 p-4 rounded-full font-bold absolute -top-4 left-1/2 lg:-left-4 -translate-x-1/2 lg:translate-x-0 text-center">
                             <span>
                                 2.
                             </span>
@@ -191,14 +192,11 @@
                             x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4"
                             x-on:click.away="modal=false, bsd(false)">
                             <div class="p-10 bg-white rounded-xl shadow-sm relative">
-                                <button class="rounded-full bg-red-500 absolute z-60 -top-2 -right-2 text-white"
-                                    @click="modal=false">
+                                <button class="rounded-full bg-red-500 absolute z-60 -top-2 -right-2 text-white" @click="modal=false">
                                     <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                          </svg>                          
                                     </span>
                                 </button>
                                 <h3 class="text-lg font-bold mb-3">
@@ -238,53 +236,44 @@
         }
     </script>
 
-    <div x-data="{ open: false, imageUrl: '' }" id="galeria" class="container mx-auto py-32">
-        <h1 class="text-3xl pb-12 text-center">
-            Galéria
-        </h1>
-
-        <div class="flex flex-wrap gap-4 justify-center">
-            @foreach ($kepek as $kep)
-                <div x-on:click="open = true" class="h-52 w-52 cursor-pointer"
-                    @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
-                    <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
-                </div>
-            @endforeach
-
-            <div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog"
-                aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')"
-                class="fixed inset-0 z-10 overflow-y-auto">
-
-                <div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
 
 
-                <div x-show="open" x-transition x-on:click="open = false"
-                    class="relative flex min-h-screen items-center justify-center p-4">
+<div x-data="{ open: false, imageUrl: '' }" id="galeria" class="container mx-auto py-32">
+    <h1 class="text-3xl pb-12 text-center">
+        Galéria
+    </h1>
 
-                    <div x-on:click.stop x-trap.noscroll.inert="open"
-                        class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg">
-                        <button class="absolute bg-red-500 hover:bg-red-700 text-white rounded-full -top-2 -right-2">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <img class="w-full h-full object-cover" :src="imageUrl" />
-                    </div>
+    <div class="flex flex-wrap gap-4 justify-center">
+        @foreach ($kepek as $kep)
+            <div x-on:click="open = true" class="h-52 w-52 cursor-pointer"
+            @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
+                <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
+            </div>
+        @endforeach
+
+        <div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" 
+            class="fixed inset-0 z-10 overflow-y-auto">
+
+  
+
+            <div x-show="open" x-transition x-on:click="open = false"
+                class="relative flex min-h-screen items-center justify-center p-4">
+                <div x-on:click.stop x-trap.noscroll.inert="open"
+                    class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-2 shadow-lg">
+                    <img x-on:click="open = false" class="w-full h-full object-cover" :src="imageUrl" />
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
+    
 
     <div id="kapcsolat" class="container-fluid">
-        <section class="relative py-20 lg:py-[120px] z-[-1]">
+        <section class="relative py-20 lg:py-[120px] ">
             <div class="absolute w-full h-1/2 -z-100 top-0 left-0 bg-blue-200"></div>
-            <div class="container mx-auto relative">
+            <div class="container mx-auto relative px-8 lg:px-0">
                 <div class="flex flex-wrap items-center -mx-4">
                     <div class="w-full lg:w-6/12 xl:w-7/12 px-4">
                         <div class="mb-[60px] lg:mb-[100px] xl:mb-[150px]">
@@ -296,7 +285,7 @@
                                 your problem.
                             </h2>
                         </div>
-                        <div class="flex flex-wrap -mx-4">
+                        <div class="flex flex-wrap -mx-4 lg:pt-20">
                             <div class="max-w-[330px] w-full px-4">
                                 <div class="w-full mb-12">
                                     <div class="flex pt-4">
@@ -320,8 +309,7 @@
                                                 Székhely: 1115 Budapest, Bartók Béla út 96.
                                             </p>
                                             <p class="text-base text-body-color">
-                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt
-                                                megvalósítási
+                                                Fióktelep, ami egyben az ÉMOP-1.3.1-12-2012-0053 projekt megvalósítási
                                                 helyszíne is volt:
                                                 2653 Bánk, Rózsafa u. 30.
                                             </p>
@@ -355,82 +343,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-6/12 xl:w-5/12 px-4 z-">
-                        <div
-                            class="
-                    bg-white
-                    rounded-lg
-                    shadow-lg
-                    py-12
-                    px-8
-                    sm:p-[60px]
-                    lg:px-12
-                    xl:p-60px
-                    ">
-                            <h3 class="font-semibold text-black text-2xl sm:text-[28px] mb-8">
-                                Küldj üzenetet
-                            </h3>
-                            <form>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">
-                                        Név*
-                                    </label>
-                                    <input type="text" placeholder="név"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             focus:ring-1 focus:ring-sky-500
-                             
-                             " />
-                                </div>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">Email*</label>
-                                    <input type="email" placeholder="example@yourmail.com"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             focus-visible:shadow-none
-                             focus:border-primary
-                             outline-none
-                             " />
-                                </div>
-                                <div class="mb-6">
-                                    <label class="text-xs text-body-color block">Üzenet*</label>
-                                    <textarea rows="3" placeholder="üzenet szövege"
-                                        class="
-                             border-b border-[#f1f1f1]
-                             w-full
-                             text-base text-body-color
-                             py-4
-                             resize-none
-                             focus-visible:shadow-none
-                             focus:border-primary
-                             outline-none
-                             "></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit"
-                                        class="
-                             text-white
-                             bg-blue-700
-                             text-base
-                             font-medium
-                             rounded
-                             px-10
-                             py-3
-                             transition
-                             hover:bg-opacity-90
-                             ">
-                                        Küldés
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+@livewire('contact')
                 </div>
             </div>
         </section>
