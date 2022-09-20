@@ -24,7 +24,6 @@ class Controller extends BaseController
   
         return view('welcome',compact(['hirek', 'kepek']));
     }
-
     public function fooldal()
     {
         $hirek = Hir::latest()->get();

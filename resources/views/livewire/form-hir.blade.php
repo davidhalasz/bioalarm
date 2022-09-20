@@ -11,10 +11,15 @@
 
     <div class="form-group mb-6">
         <label for="body" class="block mb-2 text-sm font-medium">Szöveg</label>
-        <textarea id="body" rows="4" wire:model="body"
-            class="block p-2.5 w-full text-black bg-gray-50 rounded-lg border border-gray-300 text-gray-900
-            focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Leave a comment..."></textarea>
+<div wire:model.lazy="body" 
+wire:ignore
+x-data
+@trix-blur="$dispatch('change', $event.target.value)"
+>
+
+    <trix-editor></trix-editor>
+</div>
+        
         @error('body')
             <span class="text-danger">{{ $message }}</span>
         @enderror
