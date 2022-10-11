@@ -245,7 +245,7 @@
 
     <div class="flex flex-wrap gap-4 justify-center">
         @foreach ($kepek as $kep)
-            <div x-on:click="open = true" class="h-64 w-64 cursor-pointer"
+            <div x-on:click="open = true" class="h-52 w-52 cursor-pointer"
             @click="imageUrl = '{{ url('/storage/galeria/' . $kep->filepath) }}'">
                 <img class="w-full h-full object-cover" src="{{ url('/storage/galeria/' . $kep->filepath) }}" />
             </div>
