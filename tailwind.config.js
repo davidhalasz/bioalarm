@@ -7,6 +7,7 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './*.html", "./ecommerce/*.html", "./assets/**/*.js'
     ],
 
     theme: {
@@ -18,11 +19,10 @@ module.exports = {
                 'baseBlue': '#0099ff',
             },
             backgroundImage: {
-                'wave-bg': "url('../public/images/footer-bg.svg')",
-                'tanacsadas-bg': "url('./public/images/version2/tanacsadas.jpg')"
+                'wave-bg': "url('../public/images/footer-bg.svg')"
             }
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
+    plugins: [ require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'), require("tailgrids/plugin")],
 };
