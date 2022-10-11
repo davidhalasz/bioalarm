@@ -1,5 +1,5 @@
 <footer class="bg-blue-500 pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-[-10] text-white">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-8 lg:px-0">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-2/3 lg:w-1/3 px-4">
                 <div class="w-full mb-12">

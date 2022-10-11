@@ -14,6 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" href="https://unpkg.com/trix@1.3.1/dist/trix.css">
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -39,5 +40,6 @@
         @stack('modals')
 
         @livewireScripts
+        <script src="https://unpkg.com/trix@1.3.1/dist/trix.js"></script>
     </body>
 </html>

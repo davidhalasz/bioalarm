@@ -12,11 +12,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <script>
-            function scrollTo(id) {
-                document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-            }
-        </script>
+        @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen homePage">
